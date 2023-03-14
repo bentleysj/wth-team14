@@ -1,8 +1,8 @@
 on: [push]
-name: Azure ARM
-
+name: 
+    Azure ARM
 env:
-    targetEnv: development
+    targetEnv: sjbwthdevops-test
 
 jobs:
     build-and-deploy:
@@ -23,7 +23,7 @@ jobs:
         with:          
           resourceGroupName: wth-team14-rg
           template: ./ARM-Templates/container-webapp-template.json
-          parameters: webAppName=${{env.TARGETENV}}
+          parameters: webAppName=${{env.targetEnv}}
 
         # output containerName variable from template
       - run: echo ${{ steps.deploy.outputs.containerName }}
