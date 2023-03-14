@@ -2,7 +2,7 @@ on: [push]
 name: Azure ARM
 
 env:
-    targetenv: development
+    targetEnv: development
 
 jobs:
     build-and-deploy:
