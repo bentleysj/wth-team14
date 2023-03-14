@@ -17,7 +17,7 @@ jobs:
       - name: Run ARM deploy
         uses: azure/arm-deploy@v1
         with:
-          subscriptionId: ${{ secrets.SERVICE_PRINCIPLE }}
+          subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
           resourceGroupName: 'wth-team14-rg'
           template: ./azuredeploy.json
           parameters: storageAccountType=Standard_LRS
