@@ -16,4 +16,5 @@ jobs:
         uses: mscoutermarsh/cowsays-action@master
         with:
           text: 'a cow'
+          color: red
     
